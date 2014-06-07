@@ -1,0 +1,7 @@
+parameters:
+#    qualium_telus_votacion.example.class: Qualium\Telus\VotacionBundle\Example
+
+services:
+#    qualium_telus_votacion.example:
+#        class: %qualium_telus_votacion.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

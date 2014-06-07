@@ -1,0 +1,53 @@
+Qualium\Telus\VotacionBundle\Entity\Candidatos:
+    type: entity
+    table: null
+    repositoryClass: Qualium\Telus\VotacionBundle\Entity\CandidatosRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        surnames:
+            type: string
+            length: 255
+        name:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+            unique: true
+        documentNumber:
+            type: string
+            length: 255
+        department:
+            type: string
+            length: 255
+        registerDate:
+            type: datetime
+        updateDate:
+            type: datetime
+    
+    oneToOne:
+        idCommitee:
+            targetEntity: Comites
+            joinColumn:
+              name: idCommitee
+              referencedColumnName: id
+              onDelete: RESTRICT
+        idCountry:
+            targetEntity: Paises
+            joinColumn:
+              name: idCountry
+              referencedColumnName: id
+              onDelete: RESTRICT
+        documentType:
+            targetEntity: Documentos
+            joinColumn:
+                name: documentType
+                referencedColumnName: id
+                onDelete: RESTRICT
+    
+    lifecycleCallbacks: {  }

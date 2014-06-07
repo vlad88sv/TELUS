@@ -1,0 +1,18 @@
+Qualium\Telus\VotacionBundle\Entity\Paises:
+    type: entity
+    table: null
+    repositoryClass: Qualium\Telus\VotacionBundle\Entity\PaisesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        iso:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

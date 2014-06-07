@@ -1,0 +1,4 @@
+qualium_telus_votacion:
+    resource: "@QualiumTelusVotacionBundle/Resources/config/routing.yml"
+    prefix:   /
+

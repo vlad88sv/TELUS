@@ -1,0 +1,40 @@
+Qualium\Telus\VotacionBundle\Entity\Votos:
+    type: entity
+    table: null
+    repositoryClass: Qualium\Telus\VotacionBundle\Entity\VotosRepository
+    indexes:
+        fechaVoto_ix:
+            columns: [ fechaVoto ]
+        flagEliminado_ix:
+            columns: [ flagEliminado ]
+      
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fechaVoto:
+            type: datetime
+        flagEliminado:
+            type: integer
+        razonEliminado:
+            type: string
+            length: 255
+
+    oneToOne:
+      idUser:
+        targetEntity: User
+        joinColumn:
+          name: idUser
+          referencedColumnName: id
+          onDelete: RESTRICT
+      idCandidato:
+        targetEntity: Candidatos
+        joinColumn:
+          name: idCandidato
+          referencedColumnName: id
+          onDelete: RESTRICT
+      
+    lifecycleCallbacks: {  }

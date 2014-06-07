@@ -1,0 +1,15 @@
+Qualium\Telus\VotacionBundle\Entity\Comites:
+    type: entity
+    table: null
+    repositoryClass: Qualium\Telus\VotacionBundle\Entity\ComitesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

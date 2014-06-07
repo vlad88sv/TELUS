@@ -1,0 +1,19 @@
+Qualium\Telus\VotacionBundle\Entity\Contador:
+    type: entity
+    table: null
+    repositoryClass: Qualium\Telus\VotacionBundle\Entity\ContadorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        ip:
+            type: string
+            length: '15'
+        idCandidato:
+            type: integer
+        fecha:
+            type: datetime
+    lifecycleCallbacks: {  }

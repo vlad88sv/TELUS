@@ -1,0 +1,29 @@
+<div id="cabecera">
+    <table>
+        <tr>
+            <td id="cabecera_izquierda">
+                <a href="{{ url('qualium_telus_votacion_homepage') }}"><img src="{{ asset('images/TELUS.png') }}" /></a>
+            </td>
+            <td id="cabecera_derecha">
+                {% if app.user %}
+                    Identificado como <b>{{ app.user.username }}</b>
+                    &nbsp;
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <a class="boton" href="{{ path('fos_user_security_logout') }}">Candidatos</a>
+                    &nbsp;
+                    {% endif %}                    
+                    <a class="boton" href="{{ path('fos_user_security_logout') }}">Salir</a>
+                {% else %}
+                    {% if path(app.request.attributes.get('_route')) not in [path('fos_user_security_login'), path('fos_user_registration_register')]  %}
+                        <a class="boton" href="{{ path('fos_user_security_login') }}">Iniciar</a>
+                        &nbsp;
+                        <a class="boton" href="{{ path('fos_user_registration_register') }}">Registrarse</a>
+                    {% else %}
+                        <a class="boton" href="{{ url('qualium_telus_votacion_homepage') }}">Cancelar</a>
+                    {% endif %}
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+    
+</div>
