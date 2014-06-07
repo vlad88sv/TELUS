@@ -10,6 +10,7 @@ Qualium\Telus\VotacionBundle\Entity\User:
         idCountry:
             targetEntity: Paises
             joinColumn:
+              nullable: false
               name: idCountry
               referencedColumnName: id
               onDelete: RESTRICT

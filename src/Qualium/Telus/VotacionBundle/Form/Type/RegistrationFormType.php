@@ -11,7 +11,7 @@ class RegistrationFormType extends BaseType
     {
         parent::buildForm($builder, $options);
 
-        $builder->add('idCountry');
+        $builder->add('idCountry', null, array('label'  => 'País'));
 
     }
 

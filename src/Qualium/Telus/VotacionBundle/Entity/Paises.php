@@ -79,4 +79,9 @@ class Paises
     {
         return $this->iso;
     }    
+    
+    public function __toString()
+    {
+        return $this->nombre;
+    }
 }

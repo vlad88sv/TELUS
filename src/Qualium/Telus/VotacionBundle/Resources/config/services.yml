@@ -5,3 +5,9 @@ services:
 #    qualium_telus_votacion.example:
 #        class: %qualium_telus_votacion.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+services:
+    qualium_telus_votacion.registration.form.type:
+        class: Qualium\Telus\VotacionBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: qualium_user_registration }
