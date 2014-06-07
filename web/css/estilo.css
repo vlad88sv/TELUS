@@ -45,7 +45,7 @@ a.boton {
 }
 
 a.boton:hover {
-    background: #49166D;
+    text-decoration: underline;
 }
 
 #cabecera { border-bottom: #666666 1px solid;margin-bottom: 1em;}
