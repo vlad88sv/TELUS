@@ -29,6 +29,10 @@ generar_reporte_visitas:
     pattern: /report/visitors/execute/{days}
     defaults: { _controller: QualiumTelusVotacionBundle:Reportes:generateVisitorReports }
     
-estisticas_votos:
+estadisticas_votos:
     pattern: /admin/statistic/votes
     defaults: { _controller: QualiumTelusVotacionBundle:Estadisticas:votos }
+
+ver_candidatos:
+    pattern: /candidatos/ver
+    defaults: { _controller: QualiumTelusVotacionBundle:Ajax:verCandidatos }
