@@ -6,6 +6,7 @@
 __ROUTE = {};
 __ROUTE['ver_candidatos'] = '{{ path('ver_candidatos') }}';
 __ROUTE['ver_comites'] = '{{ path('ver_comites') }}';
+__ROUTE['images'] = '{{ asset('images/') }}';
 </script>
 <script type="text/javascript" src="{{ asset('js/default.index.js') }}"></script>
 {% endblock %}
@@ -19,7 +20,7 @@ __ROUTE['ver_comites'] = '{{ path('ver_comites') }}';
         <p>To vote you must <a href="{{ path('fos_user_registration_register') }}">sign in</a> or if you already have an account you can <a href="{{ path('fos_user_security_login') }}">log in</a></p>
     {% endif %}
     
-    <div id="objetivoComites" class="contenedorComites">
+    <div id="actionContainer" class="contenedorComites">
         <br><p><i>Loading the most interesting <b>committees</b></i> right now</p>
         <img src="{{ asset('images/loading.gif') }}" />
     </div>

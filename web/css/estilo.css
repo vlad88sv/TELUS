@@ -165,7 +165,12 @@ table.visitas th, table.visitas td {
     margin:5px;
     position: relative;
     overflow: hidden;
+    text-align: left;
 }
+
+.contenedorComites .comiteUnit:hover {
+    border: 1px solid red;
+} 
 
 .contenedorComites .comiteUnit .comiteInfo {
     position: absolute;
@@ -175,6 +180,7 @@ table.visitas th, table.visitas td {
     height: 20px;
     background: #49166D;
     color: #fefefe;
+    text-align: center;
 }
 
 .contenedorComites .comiteUnit .comiteCounter {
@@ -183,9 +189,38 @@ table.visitas th, table.visitas td {
     right: 0px;
     width: 40px;
     height: 15px;
-    background: #57ae00;
-    color: #fefefe;
+    background: #90EE90;
+    color: #000000;
     index:99;
     font-family: monospace;
     font-size:0.9em;
+    padding-left:10px;
+    padding-top:5px;
+    border-radius: 15px 0 0 0;
+    opacity: 0.5;
+    
+}
+
+.contenedorComites .comiteUnit .comiteVoteAction {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 25px;
+    padding: 5px 0 0 5px;
+    background: red;
+    color: #fefefe;
+    index:99;
+    font-size:0.9em;
+    font-weight: bold;
+    border-radius: 0 0 15px 0;
+    opacity: 0.5;
+}
+
+.contenedorComites .comiteUnit .comiteCandidato {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin:0px;
+    padding:0px;
 }
