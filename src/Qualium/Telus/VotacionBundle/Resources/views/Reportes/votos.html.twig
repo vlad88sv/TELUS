@@ -1,0 +1,68 @@
+{% extends '::base.html.twig' %}
+{% block title %}Site statistics and reports{% endblock %}
+{% block body %}
+<h1>Voting reports / statistics</h1>
+<h2>General statistics</h2>
+<table class="visitas">
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Global number of votes</td>
+            <td>{{global_number_of_votes}}</td>
+        </tr>
+        <tr>
+            <td>Number of registered Candidates</td>
+            <td>{{global_number_of_candidates}}</td>
+        </tr>
+        <tr>
+            <td>Number of registered Committess</td>
+            <td>{{global_number_of_committess}}</td>
+        </tr>
+        <tr>
+            <td>Number of registered users</td>
+            <td>{{global_number_of_users}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Top 10 Candidates</h2>
+<table class="visitas">
+    <thead>
+        <tr>
+            <th>Candidate</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for candidato in global_top_candidates %}
+        <tr>
+            <td>ID {{candidato.id}} - {{candidato.name}} {{candidato.surnames}}</td>
+            <td>{{candidato.votes}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Top 10 Committess</h2>
+<table class="visitas">
+    <thead>
+        <tr>
+            <th>Committe</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for committe in global_top_committess %}
+        <tr>
+            <td>{{committe.nombre}}</td>
+            <td>{{committe.total}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
