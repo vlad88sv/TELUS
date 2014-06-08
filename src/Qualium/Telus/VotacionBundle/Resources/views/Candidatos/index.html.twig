@@ -12,6 +12,7 @@
                 <th>Email</th>
                 <th>Documentnumber</th>
                 <th>Department</th>
+                <th>Votes</th>
                 <th>Registerdate</th>
                 <th>Updatedate</th>
                 <th>Actions</th>
@@ -26,6 +27,7 @@
                 <td>{{ entity.email }}</td>
                 <td>{{ entity.documentNumber }}</td>
                 <td>{{ entity.department }}</td>
+                <td>{{ entity.votes }}</td>
                 <td>{% if entity.registerDate %}{{ entity.registerDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{% if entity.updateDate %}{{ entity.updateDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>

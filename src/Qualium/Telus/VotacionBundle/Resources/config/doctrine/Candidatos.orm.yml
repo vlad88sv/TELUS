@@ -51,6 +51,7 @@ Qualium\Telus\VotacionBundle\Entity\Candidatos:
         documentType:
             targetEntity: Documentos
             joinColumn:
+                nullable: false
                 name: documentType
                 referencedColumnName: id
                 onDelete: RESTRICT

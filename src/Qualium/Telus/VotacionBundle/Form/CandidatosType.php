@@ -25,6 +25,7 @@ class CandidatosType extends AbstractType
             ->add('idCommitee', null, array('label' => 'Comité'))
             ->add('idCountry', null, array('label' => 'País'))
             ->add('documentType')
+            ->add('votes')
         ;
     }
     
