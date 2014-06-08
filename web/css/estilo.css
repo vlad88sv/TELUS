@@ -101,3 +101,7 @@ a.boton:hover {
 .fos_user_registration_register  input[type="submit"] {
     margin-left: 250px;
 }
+
+.lista_botones li {
+    margin-bottom: 15px;
+}
