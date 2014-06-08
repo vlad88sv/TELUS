@@ -47,5 +47,6 @@ candidato_votar:
 
 webservice:
     pattern: /service.php/{idCandidato}
-    defaults: { _controller: QualiumTelusVotacionBundle:Ajax:votarCandidato, idCandidato : 0 }
-    
+    defaults: { _controller: QualiumTelusVotacionBundle:Webservice:jsonCandidates, idCandidato : 0 }
+    requirements:
+        idCandidato:  \d+
