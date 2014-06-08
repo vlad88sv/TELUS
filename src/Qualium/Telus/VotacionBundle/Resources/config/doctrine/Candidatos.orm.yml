@@ -36,19 +36,12 @@ Qualium\Telus\VotacionBundle\Entity\Candidatos:
             options:
                 default: 0
     
-    oneToOne:
+    manyToOne:
         idCommitee:
             targetEntity: Comites
             joinColumn:
               nullable: false
               name: idCommitee
-              referencedColumnName: id
-              onDelete: RESTRICT
-        idCountry:
-            targetEntity: Paises
-            joinColumn:
-              nullable: false
-              name: idCountry
               referencedColumnName: id
               onDelete: RESTRICT
         documentType:
@@ -58,5 +51,13 @@ Qualium\Telus\VotacionBundle\Entity\Candidatos:
                 name: documentType
                 referencedColumnName: id
                 onDelete: RESTRICT
+        idCountry:
+            targetEntity: Paises
+            joinColumn:
+                nullable: false
+                unsigned: false
+                name: idCountry
+                referencedColumnName: id
+ 
     
     lifecycleCallbacks: {}

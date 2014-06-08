@@ -6,11 +6,12 @@ Qualium\Telus\VotacionBundle\Entity\User:
             type: integer
             generator:
                 strategy: AUTO
-    oneToOne:
+    manyToOne:
         idCountry:
             targetEntity: Paises
             joinColumn:
-              nullable: false
-              name: idCountry
-              referencedColumnName: id
-              onDelete: RESTRICT
+                nullable: false
+                unsigned: false
+                name: idCountry
+                referencedColumnName: id
+ 

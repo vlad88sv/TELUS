@@ -23,18 +23,20 @@ Qualium\Telus\VotacionBundle\Entity\Votos:
             type: string
             length: 255
 
-    oneToOne:
+    manyToOne:
       idUser:
         targetEntity: User
         joinColumn:
           name: idUser
           referencedColumnName: id
           onDelete: RESTRICT
+          nullable: false
       idCandidato:
         targetEntity: Candidatos
         joinColumn:
           name: idCandidato
           referencedColumnName: id
           onDelete: RESTRICT
+          nullable: false
       
     lifecycleCallbacks: {  }
