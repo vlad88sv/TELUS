@@ -22,23 +22,27 @@
                 <td>{{ entity.email }}</td>
             </tr>
             <tr>
-                <th>Documentnumber</th>
-                <td>{{ entity.documentNumber }}</td>
+                <th>Document N.</th>
+                <td>{{ entity.documentType }}: {{ entity.documentNumber }}</td>
             </tr>
             <tr>
                 <th>Department</th>
                 <td>{{ entity.department }}</td>
             </tr>
             <tr>
+                <th>Committee</th>
+                <td>{{ entity.idCommitee }}</td>
+            </tr>
+            <tr>
                 <th>Votes</th>
                 <td>{{ entity.votes }}</td>
             </tr>
             <tr>
-                <th>Registerdate</th>
+                <th>Registered</th>
                 <td>{{ entity.registerDate|date('Y-m-d H:i:s') }}</td>
             </tr>
             <tr>
-                <th>Updatedate</th>
+                <th>Updated</th>
                 <td>{{ entity.updateDate|date('Y-m-d H:i:s') }}</td>
             </tr>
         </tbody>

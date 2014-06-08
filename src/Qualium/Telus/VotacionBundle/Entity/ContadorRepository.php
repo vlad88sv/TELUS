@@ -12,4 +12,12 @@ use Doctrine\ORM\EntityRepository;
  */
 class ContadorRepository extends EntityRepository
 {
+    public function agruparVisitasDesdeHace($dias)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT SUBSTRING(p.fecha, 6, 2), COUNT(p) FROM QualiumTelusVotacionBundle:Contador p GROUP BY p.fecha'
+            )
+            ->getResult();
+    }
 }

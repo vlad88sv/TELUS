@@ -14,6 +14,7 @@ Qualium\Telus\VotacionBundle\Entity\Contador:
             length: '15'
         idCandidato:
             type: integer
+            nullable: false
         fecha:
             type: datetime
     lifecycleCallbacks: {  }

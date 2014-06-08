@@ -70,7 +70,6 @@ class Candidatos
      */
     private $updateDate;
 
-
     /**
      * Get id
      *
@@ -80,7 +79,7 @@ class Candidatos
     {
         return $this->id;
     }
-
+  
     /**
      * Set surnames
      *

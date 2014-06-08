@@ -31,7 +31,10 @@ Qualium\Telus\VotacionBundle\Entity\Candidatos:
             type: datetime
         votes:
             type: integer
+            nullable: false
             unsigned: true
+            options:
+                default: 0
     
     oneToOne:
         idCommitee:
@@ -56,4 +59,4 @@ Qualium\Telus\VotacionBundle\Entity\Candidatos:
                 referencedColumnName: id
                 onDelete: RESTRICT
     
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks: {}

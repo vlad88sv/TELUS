@@ -18,14 +18,14 @@ class CandidatosType extends AbstractType
             ->add('surnames')
             ->add('name')
             ->add('email')
-            ->add('documentNumber')
-            ->add('department')
-            ->add('registerDate')
-            ->add('updateDate')
-            ->add('idCommitee', null, array('label' => 'Comité'))
-            ->add('idCountry', null, array('label' => 'País'))
             ->add('documentType')
+            ->add('documentNumber')
+            ->add('idCountry', null, array('label' => 'País'))
+            ->add('department')
+            ->add('idCommitee', null, array('label' => 'Comité'))
             ->add('votes')
+            ->add('registerDate', null, array('data' => new \DateTime()))
+            ->add('updateDate', null, array('data' => new \DateTime()))
         ;
     }
     

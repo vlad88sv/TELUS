@@ -64,9 +64,12 @@ a.boton:hover {
     padding-right: 15px;
 }
 #content {
-    padding-bottom: 2em;
+    padding: 0 1em 2em 1em;
     max-width: 1024px;
     margin:auto;
+    border-left: 1px solid #F0F0F0;
+    border-right: 1px solid #F0F0F0;
+    
 }
 #footer {
     clear: both;
@@ -104,4 +107,39 @@ a.boton:hover {
 
 .lista_botones li {
     margin-bottom: 15px;
+}
+
+.records_list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.records_list thead {
+    background: #D0D0D0;
+    color: #49166D;
+}
+
+.records_list tr {
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.records_list th, .records_list td {
+    text-align: left;
+}
+
+table.visitas {
+    border-collapse: collapse;
+}
+
+table.visitas thead {
+    background: #D0D0D0;
+    color: #49166D;
+}
+
+table.visitas tr {
+    border-bottom: 1px solid #D0D0D0;
+}
+
+table.visitas th, table.visitas td {
+    text-align: center;
 }
