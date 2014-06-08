@@ -143,3 +143,49 @@ table.visitas tr {
 table.visitas th, table.visitas td {
     text-align: center;
 }
+
+.contenedorComites {
+    width: 90%;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    height: 655px;
+    padding: 10px 10px;
+    margin: auto;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.contenedorComites .comiteUnit {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    display: inline-block;
+    margin:5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedorComites .comiteUnit .comiteInfo {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    height: 20px;
+    background: #49166D;
+    color: #fefefe;
+}
+
+.contenedorComites .comiteUnit .comiteCounter {
+    position: absolute;
+    bottom: 20px;
+    right: 0px;
+    width: 40px;
+    height: 15px;
+    background: #57ae00;
+    color: #fefefe;
+    index:99;
+    font-family: monospace;
+    font-size:0.9em;
+}
