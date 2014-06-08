@@ -1,0 +1,30 @@
+comites:
+    pattern:  /
+    defaults: { _controller: "QualiumTelusVotacionBundle:Comites:index" }
+
+comites_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "QualiumTelusVotacionBundle:Comites:show" }
+
+comites_new:
+    pattern:  /new
+    defaults: { _controller: "QualiumTelusVotacionBundle:Comites:new" }
+
+comites_create:
+    pattern:  /create
+    defaults: { _controller: "QualiumTelusVotacionBundle:Comites:create" }
+    requirements: { _method: post }
+
+comites_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "QualiumTelusVotacionBundle:Comites:edit" }
+
+comites_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "QualiumTelusVotacionBundle:Comites:update" }
+    requirements: { _method: post|put }
+
+comites_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "QualiumTelusVotacionBundle:Comites:delete" }
+    requirements: { _method: post|delete }

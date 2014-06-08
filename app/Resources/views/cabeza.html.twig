@@ -6,20 +6,16 @@
             </td>
             <td id="cabecera_derecha">
                 {% if app.user %}
-                    Identificado como <b>{{ app.user.username }}</b> [<b>{{ app.user.idCountry.iso }}</b>] 
+                    You're logged in as <b>{{ app.user.username }}</b> [<b>{{ app.user.idCountry.iso }}</b>] 
                     &nbsp;
-                    {% if is_granted('ROLE_ADMIN') %}
-                    <a class="boton" href="{{ path('fos_user_security_logout') }}">Candidatos</a>
-                    &nbsp;
-                    {% endif %}                    
-                    <a class="boton" href="{{ path('fos_user_security_logout') }}">Salir</a>
+                    <a class="boton" href="{{ path('fos_user_security_logout') }}">Sign out</a>
                 {% else %}
-                    {% if path(app.request.attributes.get('_route')) not in [path('fos_user_security_login'), path('fos_user_registration_register')]  %}
-                        <a class="boton" href="{{ path('fos_user_security_login') }}">Iniciar</a>
+                    {% if path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) not in [path('fos_user_security_login'), path('fos_user_registration_register')]  %}
+                        <a class="boton" href="{{ path('fos_user_security_login') }}">Sing in</a>
                         &nbsp;
-                        <a class="boton" href="{{ path('fos_user_registration_register') }}">Registrarse</a>
+                        <a class="boton" href="{{ path('fos_user_registration_register') }}">Sign up</a>
                     {% else %}
-                        <a class="boton" href="{{ url('qualium_telus_votacion_homepage') }}">Cancelar</a>
+                        <a class="boton" href="{{ url('qualium_telus_votacion_homepage') }}">Cancel</a>
                     {% endif %}
                 {% endif %}
             </td>

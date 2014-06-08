@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+{% block title %}Vote now!{% endblock %}
+{% block body %}
+    <div class="centrar">
+        <h1>Admin panel</h1>
+    </div>
+    
+    <h2>Manteniances</h2>
+    <ul class="lista_botones">
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Users</a></li>
+        <li><a href="{{ path('candidatos') }}" class="boton">Candidates</a></li>
+        <li><a href="{{ path('comites') }}" class="boton">Commitees</a></li>
+        <li><a href="{{ path('documentos') }}" class="boton">Document types</a></li>
+    </ul>
+    
+    <h2>Tools</h2>
+    <ul class="lista_botones">
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Export visitor counter to TXT file</a></li>
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Force vote recount</a></li>
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Reset vote count</a></li>
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Import candidates from CSV file</a></li>
+    </ul>
+    
+    <h2>Reports</h2>
+    <ul class="lista_botones">
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Voting statistics</a></li>
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Site statistics</a></li>
+        <li><a href="{{ path('CRUD_user') }}" class="boton">Commitees statistics</a></li>
+    </ul>
+
+{% endblock %}

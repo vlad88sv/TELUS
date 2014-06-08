@@ -1,0 +1,30 @@
+CRUD_user:
+    pattern:  /
+    defaults: { _controller: "QualiumTelusVotacionBundle:User:index" }
+
+CRUD_user_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "QualiumTelusVotacionBundle:User:show" }
+
+CRUD_user_new:
+    pattern:  /new
+    defaults: { _controller: "QualiumTelusVotacionBundle:User:new" }
+
+CRUD_user_create:
+    pattern:  /create
+    defaults: { _controller: "QualiumTelusVotacionBundle:User:create" }
+    requirements: { _method: post }
+
+CRUD_user_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "QualiumTelusVotacionBundle:User:edit" }
+
+CRUD_user_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "QualiumTelusVotacionBundle:User:update" }
+    requirements: { _method: post|put }
+
+CRUD_user_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "QualiumTelusVotacionBundle:User:delete" }
+    requirements: { _method: post|delete }

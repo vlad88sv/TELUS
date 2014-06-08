@@ -2,3 +2,18 @@ qualium_telus_votacion:
     resource: "@QualiumTelusVotacionBundle/Resources/config/routing.yml"
     prefix:   /
 
+QualiumTelusVotacionBundle_candidatos:
+    resource: "@QualiumTelusVotacionBundle/Resources/config/routing/candidatos.yml"
+    prefix:   /CRUD/candidatos
+
+QualiumTelusVotacionBundle_documentos:
+    resource: "@QualiumTelusVotacionBundle/Resources/config/routing/documentos.yml"
+    prefix:   /CRUD/documentos
+
+QualiumTelusVotacionBundle_comites:
+    resource: "@QualiumTelusVotacionBundle/Resources/config/routing/comites.yml"
+    prefix:   /CRUD/comites
+
+QualiumTelusVotacionBundle_user:
+    resource: "@QualiumTelusVotacionBundle/Resources/config/routing/user.yml"
+    prefix:   /CRUD/user

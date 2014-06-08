@@ -1,13 +1,13 @@
 {% extends '::base.html.twig' %}
-{% block title %}¡Vota ya!{% endblock %}
+{% block title %}Vote now!{% endblock %}
 {% block body %}
 <div class="centrar">
-    <h1>¡Vota por tu candidato ya!</h1>
+    <h1>Vote for your favorite candidate now!</h1>
     {% if app.user %}
-        <p>Recuerda que solo puedes votar una vez por candidato, y solo por un candidato de cada comité.</p>
-        <p>Puedes votar únicamente por candidatos de <i>{{ app.user.idCountry.nombre }}</i>.</p>
+        <p>Remember you can only vote once per candidate, and only one candidate for each committee.</p>
+        <p>You can vote only for candidates from <i>{{ app.user.idCountry.nombre }}</i>.</p>
     {% else %}
-        <p>Para votar debes <a href="{{ path('fos_user_registration_register') }}">registrarte</a> o si ya tienes una cuenta puedes <a href="{{ path('fos_user_security_login') }}">iniciar sesión</a></p>
+        <p>To vote you must <a href="{{ path('fos_user_registration_register') }}">sign in</a> or if you already have an account you can <a href="{{ path('fos_user_security_login') }}">log in</a></p>
     {% endif %}
     
 </div>

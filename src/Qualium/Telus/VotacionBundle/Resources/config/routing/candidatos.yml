@@ -1,0 +1,30 @@
+candidatos:
+    pattern:  /
+    defaults: { _controller: "QualiumTelusVotacionBundle:Candidatos:index" }
+
+candidatos_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "QualiumTelusVotacionBundle:Candidatos:show" }
+
+candidatos_new:
+    pattern:  /new
+    defaults: { _controller: "QualiumTelusVotacionBundle:Candidatos:new" }
+
+candidatos_create:
+    pattern:  /create
+    defaults: { _controller: "QualiumTelusVotacionBundle:Candidatos:create" }
+    requirements: { _method: post }
+
+candidatos_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "QualiumTelusVotacionBundle:Candidatos:edit" }
+
+candidatos_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "QualiumTelusVotacionBundle:Candidatos:update" }
+    requirements: { _method: post|put }
+
+candidatos_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "QualiumTelusVotacionBundle:Candidatos:delete" }
+    requirements: { _method: post|delete }

@@ -55,6 +55,12 @@ class Candidatos
     private $idCommitee;
 
     /**
+     * @var integer
+     */
+    private $votes;
+
+    
+    /**
      * @var \DateTime
      */
     private $registerDate;
@@ -304,4 +310,28 @@ class Candidatos
     {
         return $this->updateDate;
     }
+    
+    /**
+     * Set votes
+     *
+     * @param integer $votes
+     * @return Candidatos
+     */
+    public function setVotes($votes)
+    {
+        $this->votes = $votes;
+
+        return $this;
+    }
+
+    /**
+     * Get votes
+     *
+     * @return integer 
+     */
+    public function getVotes()
+    {
+        return $this->votes;
+    }
+
 }

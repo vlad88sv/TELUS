@@ -29,17 +29,22 @@ Qualium\Telus\VotacionBundle\Entity\Candidatos:
             type: datetime
         updateDate:
             type: datetime
+        votes:
+            type: integer
+            unsigned: true
     
     oneToOne:
         idCommitee:
             targetEntity: Comites
             joinColumn:
+              nullable: false
               name: idCommitee
               referencedColumnName: id
               onDelete: RESTRICT
         idCountry:
             targetEntity: Paises
             joinColumn:
+              nullable: false
               name: idCountry
               referencedColumnName: id
               onDelete: RESTRICT

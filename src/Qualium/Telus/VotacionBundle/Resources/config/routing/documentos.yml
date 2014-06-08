@@ -1,0 +1,30 @@
+documentos:
+    pattern:  /
+    defaults: { _controller: "QualiumTelusVotacionBundle:Documentos:index" }
+
+documentos_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "QualiumTelusVotacionBundle:Documentos:show" }
+
+documentos_new:
+    pattern:  /new
+    defaults: { _controller: "QualiumTelusVotacionBundle:Documentos:new" }
+
+documentos_create:
+    pattern:  /create
+    defaults: { _controller: "QualiumTelusVotacionBundle:Documentos:create" }
+    requirements: { _method: post }
+
+documentos_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "QualiumTelusVotacionBundle:Documentos:edit" }
+
+documentos_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "QualiumTelusVotacionBundle:Documentos:update" }
+    requirements: { _method: post|put }
+
+documentos_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "QualiumTelusVotacionBundle:Documentos:delete" }
+    requirements: { _method: post|delete }
