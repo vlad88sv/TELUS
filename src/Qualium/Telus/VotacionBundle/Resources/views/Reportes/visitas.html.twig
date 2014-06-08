@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+{% block title %}Generate visitors report{% endblock %}
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript" src="{{ asset('js/reportes.js') }}"></script>
+{% endblock %}
+{% block body %}
+    <div class="centrar"><h1>Visitors report</h1></div>
+    <p>This utility exports a TXT file containing visitor statistics summarized by day in the following format: <b>Date | # Visits</b></p>
+    <p>
+        <b>Option 1:</b> create report with limited to <input type="number" id="visitors_daysForLimitedReport" value="20" /> days ago. <a class="boton" id="visitors_generateLimitedReport" baseurl="{{ path('generar_reporte_visitas', {'days':'XXX'}) }}" href="#">Generate</a>
+    </p>
+    <p>
+        <b>Option 2:</b> create report containing all available data. <a class="boton" id="visitors_generateLimitlessReport" href="{{ path('generar_reporte_visitas', {'days':0}) }}">Generate</a>
+    </p>
+{% endblock %}
+

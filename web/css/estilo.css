@@ -74,7 +74,7 @@ a.boton:hover {
 #footer {
     clear: both;
     position: relative;
-    z-index: 999999999;
+    z-index: 99;
     height: 2em;
     margin-top: -2em;
     background: #fefefe;

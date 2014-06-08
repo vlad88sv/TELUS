@@ -15,7 +15,7 @@
     
     <h2>Tools</h2>
     <ul class="lista_botones">
-        <li><a href="{{ path('CRUD_user') }}" class="boton">Export visitor counter to TXT file</a></li>
+        <li><a href="{{ path('reporte_visitas') }}" class="boton">Export visitor counter to TXT file</a></li>
         <li><a href="{{ path('CRUD_user') }}" class="boton">Force vote recount</a></li>
         <li><a href="{{ path('CRUD_user') }}" class="boton">Reset vote count</a></li>
         <li><a href="{{ path('CRUD_user') }}" class="boton">Import candidates from CSV file</a></li>
@@ -24,8 +24,6 @@
     <h2>Reports</h2>
     <ul class="lista_botones">
         <li><a href="{{ path('CRUD_user') }}" class="boton">Voting statistics</a></li>
-        <li><a href="{{ path('CRUD_user') }}" class="boton">Site statistics</a></li>
-        <li><a href="{{ path('CRUD_user') }}" class="boton">Commitees statistics</a></li>
     </ul>
 
 {% endblock %}

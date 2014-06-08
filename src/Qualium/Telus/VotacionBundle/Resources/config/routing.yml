@@ -20,3 +20,15 @@ fos_user_change_password:
 qualium_telus_votacion_homepage:
     pattern:  /
     defaults: { _controller: QualiumTelusVotacionBundle:Default:index }
+
+reporte_visitas:
+    pattern: /report/visitors/create
+    defaults: { _controller: QualiumTelusVotacionBundle:Reportes:visitors }
+    
+generar_reporte_visitas:
+    pattern: /report/visitors/execute/{days}
+    defaults: { _controller: QualiumTelusVotacionBundle:Reportes:generateVisitorReports }
+    
+estisticas_votos:
+    pattern: /admin/statistic/votes
+    defaults: { _controller: QualiumTelusVotacionBundle:Estadisticas:votos }
