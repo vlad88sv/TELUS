@@ -4,9 +4,13 @@
 {{ parent() }}
 <script type="text/javascript">
 __ROUTE = {};
-__ROUTE['ver_candidatos'] = '{{ path('ver_candidatos') }}';
+__ROUTE['fos_user_security_login'] = '{{ path('fos_user_security_login') }}';
+__ROUTE['ver_candidatos'] = '{{ path('ver_candidatos',{'idCommite' : 'XXX'}) }}';
 __ROUTE['ver_comites'] = '{{ path('ver_comites') }}';
+__ROUTE['candidato_votar'] = '{{ path('candidato_votar', {'idCandidato' : 'XXX'}) }}';
 __ROUTE['images'] = '{{ asset('images/') }}';
+
+__LOGIN = '{{ app.user ? 1 : 0 }}';
 </script>
 <script type="text/javascript" src="{{ asset('js/default.index.js') }}"></script>
 {% endblock %}
@@ -15,7 +19,7 @@ __ROUTE['images'] = '{{ asset('images/') }}';
     <h1>Vote for your favorite candidate now!</h1>
     {% if app.user %}
         <p>Remember you can only vote once per candidate, and only one candidate for each committee.</p>
-        <p>You can vote only for candidates from <i>{{ app.user.idCountry.nombre }}</i>.</p>
+        <p>You can only vote for candidates from <i>{{ app.user.idCountry.nombre }}</i>.</p>
     {% else %}
         <p>To vote you must <a href="{{ path('fos_user_registration_register') }}">sign in</a> or if you already have an account you can <a href="{{ path('fos_user_security_login') }}">log in</a></p>
     {% endif %}

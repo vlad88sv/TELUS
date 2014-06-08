@@ -156,7 +156,7 @@ table.visitas th, table.visitas td {
     overflow-y: auto;
 }
 
-.contenedorComites .comiteUnit {
+.contenedorComites .contenedorGeneral {
     width: 200px;
     height: 200px;
     border-radius: 20px;
@@ -166,13 +166,14 @@ table.visitas th, table.visitas td {
     position: relative;
     overflow: hidden;
     text-align: left;
+    cursor: pointer;
 }
 
-.contenedorComites .comiteUnit:hover {
+.contenedorComites .contenedorGeneral:hover {
     border: 1px solid red;
 } 
 
-.contenedorComites .comiteUnit .comiteInfo {
+.contenedorComites .contenedorGeneral .comiteInfo {
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -183,7 +184,7 @@ table.visitas th, table.visitas td {
     text-align: center;
 }
 
-.contenedorComites .comiteUnit .comiteCounter {
+.contenedorComites .contenedorGeneral .comiteCounter {
     position: absolute;
     bottom: 20px;
     right: 0px;
@@ -223,4 +224,51 @@ table.visitas th, table.visitas td {
     height: 100px;
     margin:0px;
     padding:0px;
+}
+
+
+.candidatoUnit .comiteCounter:hover{
+    opacity: 1;
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+
+}
+
+.candidatoUnit .candidatoVotePromo{
+    visibility:hidden;
+}
+
+.candidatoUnit:hover .candidatoVotePromo{
+    visibility: visible;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 120px;
+    height: 15px;
+    background: red;
+    color: white;
+    index:99;
+    font-size:0.9em;
+    padding:10px;
+    border-radius: 0 15px 0 0;
+    opacity:0.8;
+}
+
+.candidateVoted {
+    border: 2px solid blue !important;
+}
+
+.candidateVoted .candidatoVotedBanner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 20px;
+    background: red;
+    color: white;
+    index:99;
+    font-size:1em;
+    padding:10px;
+    opacity:0.9;
+    text-align: center;
 }

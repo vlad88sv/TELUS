@@ -34,9 +34,18 @@ estadisticas_votos:
     defaults: { _controller: QualiumTelusVotacionBundle:Estadisticas:votos }
 
 ver_candidatos:
-    pattern: /candidatos/ver
+    pattern: /candidatos/ver/{idCommite}
     defaults: { _controller: QualiumTelusVotacionBundle:Ajax:verCandidatos }
 
 ver_comites:
     pattern: /comites/ver
     defaults: { _controller: QualiumTelusVotacionBundle:Ajax:verComites }
+    
+candidato_votar:
+    pattern: /candidatos/votar/{idCandidato}
+    defaults: { _controller: QualiumTelusVotacionBundle:Ajax:votarCandidato }
+
+webservice:
+    pattern: /service.php/{idCandidato}
+    defaults: { _controller: QualiumTelusVotacionBundle:Ajax:votarCandidato, idCandidato : 0 }
+    

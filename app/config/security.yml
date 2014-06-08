@@ -26,3 +26,4 @@ security:
         - { path: ^/admin/, role: ROLE_ADMIN }
         - { path: ^/CRUD/, role: ROLE_ADMIN }
         - { path: ^/report/, role: ROLE_ADMIN }
+        - { path: ^/candidatos/votar/, role: ROLE_USER }
