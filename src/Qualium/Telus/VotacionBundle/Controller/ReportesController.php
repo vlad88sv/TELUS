@@ -33,7 +33,7 @@ class ReportesController extends Controller
         
         $buffer = '';
         foreach($results as $result) {
-            $buffer .= $result['dia'] .'|'. $result['total']. "\n";
+            $buffer .= $result['dia'] .'|'. $result['total']. "\r\n";
         }
         
         $response = new \Symfony\Component\HttpFoundation\Response($buffer);
